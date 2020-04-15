@@ -4,7 +4,7 @@ using Flask library of Python, DynamoDB, Rekognition, Textract, Lambda
 
 The app has been deployed using zappa from AWS. To run the static app you can simply do the following:
 
-Instructions:
+**Instructions**:
 
 1. Set the config file
 In the config.py file, you need to set up your own database first!
@@ -12,25 +12,26 @@ In the config.py file, you need to set up your own database first!
 2. Run the flask:
 virtual env to run the flask by using python3:
 
-For Mac OS:
+**For Mac OS**:
  - python3 -m venv venv
  - source ./venv/bin/activate
  
-For Windows OS:
+**For Windows OS**:
  - python3 -m venv venv
  - ./venv/bin/activate
 
 setup the env for flask:
 
-For Mac OS:
+**For Mac OS**:
 - EXPORT FLASK_APP=main.py
 - EXPORT FLASK_ENV=development flask run 
 
-For Windows user:
+**For Windows user**:
 - set FLASK_APP=main.py
 - set FLASK_ENV=development
 
-flask run 
+Then just type in: 
+- flask run 
 
 Hope this works.
 
@@ -46,5 +47,5 @@ The app does the following tasks:
 Each user can choose to sign up for **face login** to provide an extra layer of security, 
 and prevent unauthorized access to their financial information.
 
-Extra:
-The project report file is also there to check the documentation.
+**Extra**:
+- The project report file is also there to check the documentation.
