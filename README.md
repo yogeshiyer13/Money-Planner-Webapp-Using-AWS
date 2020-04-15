@@ -34,7 +34,7 @@ flask run Hope this works.
 The app does the following tasks: 
 
 1. Allow user to upload an image of a receipt taken by a camera or scanned
-2. It then extracts the text information from it
+2. It then extracts the text information from receipt
 3. This data is then cleaned to extract and store only the information that is of use for calculating expenses.
 4. The user can now see how much he/she has spent in each category separately.
 5. The cost limit reached can be seen under each category for the user.
