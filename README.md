@@ -23,13 +23,16 @@ For Windows OS:
 setup the env for flask:
 
 For Mac OS:
-EXPORT FLASK_APP=main.py
-EXPORT FLASK_ENV=development flask run 
+- EXPORT FLASK_APP=main.py
+- EXPORT FLASK_ENV=development flask run 
 
 For Windows user:
-set FLASK_APP=main.py
-set FLASK_ENV=development
-flask run Hope this works.
+- set FLASK_APP=main.py
+- set FLASK_ENV=development
+
+flask run 
+
+Hope this works.
 
 The app does the following tasks: 
 
@@ -40,7 +43,7 @@ The app does the following tasks:
 5. The cost limit reached can be seen under each category for the user.
 6. The user can also search for details of specific category of receipts.
 
-Each user can choose to sign up for face login to provide an extra layer of security, 
+Each user can choose to sign up for **face login** to provide an extra layer of security, 
 and prevent unauthorized access to their financial information.
 
 
