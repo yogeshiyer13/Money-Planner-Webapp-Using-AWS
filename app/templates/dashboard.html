@@ -1,0 +1,114 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+			{% for key, value in data.items() %}
+      {% if value != None %}
+      	{% if value is string %}
+					['{{ key }}', '{{ value }}'],
+				{% else %}
+					['{{ key }}', {{ value }}],
+
+        {% endif %}
+        {% endif %}
+			{% endfor %}
+        ]);
+
+        var options = {
+          title: 'Spending for the month of November 2019',
+          };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script> 
+	</head>
+
+	<h1>Dashboard <small> Welcome {{session.username}} </small> </h1>
+<!--   <div class="row">
+  <div class = "pull-left">
+	<a class = "btn btn-success" href = "{{url_for('add_photo')}}"> Add New Receipt </a>
+	</div>
+  <div class = "pull-center">
+  <a class = "btn btn-success" href = "{{url_for('add_photo')}}"> Add New Receipt </a>
+  </div>
+  </div>
+ -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-6">
+<a class = "btn btn-success" href = "{{url_for('add_photo')}}"> Add New Receipt </a>
+    </div>
+    <div class="col-12 col-sm-6 col-md-6">
+<a class = "btn btn-warning" href = "{{url_for('add_photo')}}"> Budget Planner </a>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <hr>
+	<div class="container">
+	<div class="row align-items-center">
+	<div class="col-lg-3 col-md-4 col-xs-6">
+		<div class = "ct-chart ct-perfect-fourth"></div>
+		<div id="piechart" style="width: 600px; height: 400px;"></div>
+
+</div>
+</div>
+</div>
+	
+
+	<hr>     
+   <div class="row">
+    {% if image_names != None %}
+        {% for image_name in image_names %}
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumbnail">
+            <a href="{{url_for('view_photo',image_name=image_name)}}"><img class="img-responsive" src="https://ece1779-a3.s3.amazonaws.com/static/{{username}}/thumbnails/{{image_name}}"></a>
+        </div>
+
+
+
+
+ 
+    {% endfor %}
+    {% endif %}
+</div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+ 
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

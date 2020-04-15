@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+	<h1>Add Photo </h1>
+
+	<form action="{{url_for('add_photo')}}" method="POST" enctype="multipart/form-data">
+    	<div class="form-group">
+    		
+    		<div class = "custom-file">
+    			<input type = "file" class = "custom-file-input" name = "image" id = "image">
+    			
+    		</div>	
+		</div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+{% endblock %}

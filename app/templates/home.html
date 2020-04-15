@@ -1,0 +1,22 @@
+  
+{% extends 'layout.html' %}
+{% block body %}
+
+  <div class="jumbotron text-center">
+
+
+    	<h2>Money Planner</h2>
+    	    {% if session.logged_in == NULL %}
+      <a href="{{url_for('register')}}" class="btn btn-primary btn-sm">Register</a>
+      <a href="{{url_for('login')}}" class="btn btn-success btn-sm">Login</a>
+    {% else %}
+    	<a href="{{url_for('logout')}}" class="btn btn-danger btn-sm">Logout</a>
+    {% endif %}
+
+    </body>
+    
+  
+
+
+</div>
+{% endblock %}
