@@ -10,7 +10,7 @@ Instructions:
 In the config.py file, you need to set up your own database first!
 
 2. Run the flask:
-I created a virtual env to run the flask: by using python3:
+virtual env to run the flask by using python3:
 
 For Mac OS:
  - python3 -m venv venv
@@ -20,7 +20,7 @@ For Windows OS:
  - python3 -m venv venv
  - ./venv/bin/activate
 
-Then set the env for flask:
+setup the env for flask:
 
 For Mac OS:
 EXPORT FLASK_APP=main.py
