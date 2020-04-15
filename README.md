@@ -46,5 +46,5 @@ The app does the following tasks:
 Each user can choose to sign up for **face login** to provide an extra layer of security, 
 and prevent unauthorized access to their financial information.
 
-- Extra:
+Extra:
 The project report file is also there to check the documentation.
