@@ -1,6 +1,6 @@
 # Money-Planner-Webapp-Using-AWS
 Receipt classifier webapp in a serverless framework (Zappa) using Amazon Web Services 
-I am using Flask library of Python, DynamoDB, Rekognition, Textract, Lambda   
+using Flask library of Python, DynamoDB, Rekognition, Textract, Lambda   
 
 The app has been deployed using zappa from AWS. To run the static app you can simply do the following:
 
